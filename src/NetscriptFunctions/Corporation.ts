@@ -597,7 +597,7 @@ export function NetscriptCorporation(): InternalAPI<NSCorporation> {
       checkAccess(ctx, CorpUnlockName.OfficeAPI);
       const divisionName = helpers.string(ctx, "divisionName", _divisionName);
       const cityName = getEnumHelper("CityName").nsGetMember(ctx, _cityName);
-      const position = getEnumHelper("CorpEmployeeJob").nsGetMember(ctx, _position, "position");
+      const position = _position ? getEnumHelper("CorpEmployeeJob").nsGetMember(ctx, _position, "position") : "Unassigned";
 
       const office = getOffice(divisionName, cityName);
       return office.hireRandomEmployee(position);
