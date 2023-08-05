@@ -3,5 +3,5 @@
  * as well as the purchasing of upgrades (memory)
  */
 
-export const MaxSleevesFromCovenant = 5;
+export const MaxSleevesFromCovenant = 57;
 export const BaseCostPerSleeve = 10e12;
